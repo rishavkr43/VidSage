@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.db
+*.sqlite3
+
+# Env
+.env
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# VSCode
+.vscode/
+
+# Byte-compiled / logs
+*.log
+
+# Mac/Windows system files
+.DS_Store
+Thumbs.db
+
+# FAISS index storage (can be regenerated)
+*.faiss
+*.pkl

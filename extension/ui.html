@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VidSage - Chat with YouTube Video</title>
+    <link rel="stylesheet" href="ui.css">
+</head>
+<body>
+    <!-- Three.js background canvas -->
+    <canvas id="three-canvas"></canvas>
+    
+    <!-- Main chat interface -->
+    <div id="app">
+        <!-- Video input section (shown when no video is set) -->
+        <div id="video-input-section" class="section">
+            <div class="input-container">
+                <h1>VidSage</h1>
+                <p>Chat with any YouTube video using AI</p>
+                <div class="input-group">
+                    <input 
+                        type="text" 
+                        id="video-input" 
+                        placeholder="Enter YouTube Video ID or URL..."
+                        autocomplete="off"
+                    >
+                    <button id="start-chat-btn">Start Chat</button>
+                </div>
+                <div class="example-text">
+                    Example: dQw4w9WgXcQ or https://youtube.com/watch?v=dQw4w9WgXcQ
+                </div>
+            </div>
+        </div>
+        
+        <!-- Chat interface (shown when video is ingested) -->
+        <div id="chat-section" class="section hidden">
+            <!-- Chat header -->
+            <div class="chat-header">
+                <div class="video-info">
+                    <div class="video-indicator"></div>
+                    <span id="video-id-display">Video ID: </span>
+                </div>
+                <button id="new-video-btn" class="new-video-btn">New Video</button>
+            </div>
+            
+            <!-- Messages container -->
+            <div id="messages-container">
+                <div class="welcome-message">
+                    <img src="assets/icons/icon2.png" class="ai-avatar" alt="AI">
+                    <div class="message-content">
+                        <div class="message-text">
+                            Hi! I'm your AI assistant. I've analyzed the video and I'm ready to answer any questions you have about it!
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Loading indicator -->
+            <div id="loading-indicator" class="hidden">
+                <div class="loading-dots">
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                </div>
+            </div>
+            
+            <!-- Input area -->
+            <div class="input-area">
+                <div class="input-container-chat">
+                    <input 
+                        type="text" 
+                        id="message-input" 
+                        placeholder="Ask me anything about this video..."
+                        autocomplete="off"
+                    >
+                    <button id="send-btn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Error section -->
+        <div id="error-section" class="section hidden">
+            <div class="error-container">
+                <div class="error-icon">⚠️</div>
+                <h2 id="error-title">Something went wrong</h2>
+                <p id="error-message">Please try again</p>
+                <button id="retry-btn">Try Again</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Scripts -->
+    <script src="libs/three.min.js"></script>
+    <script src="three-scene.js"></script>
+    <script src="ui.js"></script>
+</body>
+</html>
