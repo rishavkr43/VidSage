@@ -16,31 +16,45 @@ It extracts transcripts, indexes them with FAISS, and uses **Google Gemini** to 
 
 ## 📂 Project Structure
 VidSage/
+│
 ├── backend/
-│   └── app/
-│       ├── main.py            # FastAPI app
-│       ├── transcript.py      # Transcript fetching
-│       ├── rag.py             # Embeddings + retrieval + Gemini
-│       └── models/
-│           └── schemas.py     # Pydantic models
+│   ├── app/
+│   │   ├── main.py                    # FastAPI app
+│   │   └── transcript.py              # Transcript fetching
+│   │
+│   ├── models/
+│   │   └── schemas.py                 # Pydantic models
+│   │
+│   └── rag.py                         # Embeddings + retrieval + Gemini
 │
 ├── extension/
 │   ├── assets/
-│   │   └── icons/             # avatar and icon images (e.g. icon1.png, icon2.png, icon16.png...)
-│   ├── libs/                  # third-party libs (e.g. three.min.js)
+│   │   ├── icons/                     # Avatar and icon images
+│   │   │   ├── icon1.png
+│   │   │   ├── icon2.png
+│   │   │   └── icon16.png
+│   │   └── backgrounds/
+│   │
+│   ├── libs/                          # Third-party libs (e.g. three.min.js)
 │   │   └── three.min.js
-│   ├── background.js          # opens UI in a new tab (action handler)
-│   ├── content-script.js      # injects floating button into YouTube pages
-│   ├── manifest.json          # extension manifest and permissions
-│   ├── three-scene.js         # optional Three.js scene for visuals
-│   ├── ui.css                 # styles for the extension UI
-│   ├── ui.html                # UI markup (popup or full-tab page)
-│   └── ui.js                  # frontend logic and messaging
-
+│   │
+│   ├── three-scenes/                  # Optional Three.js scene for visuals
+│   │
+│   ├── content-scripts.js             # Injects floating button into YouTube pages
+│   │
+│   ├── manifest.json                  # Extension manifest and permissions
+│   │
+│   ├── ui.css                         # Styles for the extension UI
+│   │
+│   ├── ui.html                        # UI markup (popup or full-tab page)
+│   │
+│   └── ui.js                          # Frontend logic and messaging
+│
 ├── requirements.txt
 ├── .env
 ├── .gitignore
 └── README.md
+
 
 -*-*-*-*-*
 
