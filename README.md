@@ -15,6 +15,7 @@ It extracts transcripts, indexes them with FAISS, and uses **Google Gemini** to 
 ---
 
 ## 📂 Project Structure
+```bash
 VidSage/
 │
 ├── backend/
@@ -54,6 +55,7 @@ VidSage/
 ├── .env
 ├── .gitignore
 └── README.md
+```
 
 
 -*-*-*-*-*
@@ -61,7 +63,7 @@ VidSage/
 ## 🛠️ Setup
 
 ### 1. Backend
-```bash
+
 # Install deps
 pip install -r requirements.txt
 
