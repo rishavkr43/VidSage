@@ -11,6 +11,7 @@
   
   "host_permissions": [
     "https://www.youtube.com/*",
+    "https://vidsage-2lhm.onrender.com/*",
     "http://localhost:8000/*"
   ],
   
