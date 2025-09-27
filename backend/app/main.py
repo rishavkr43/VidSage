@@ -3,7 +3,7 @@ import uvicorn
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 import logging
-
+import os;
 from app.models.schemas import IngestResponse, QueryRequest, QueryResponse
 from app.services import transcript, sessions, rag
 from app.deps import EMB_PROVIDER, LLM_PROVIDER

@@ -1,11 +1,11 @@
 // ui.js - Main UI logic for the chat interface
 class VidSageUI {
     constructor() {
-        this.API_BASE = 'https://vidsage-2lhm.onrender.com';
+        this.API_BASE = 'http://localhost:8000';
         this.currentVideoId = null;
         this.sessionId = this.generateSessionId();
         this.isProcessing = false;
-        
+      
         this.initElements();
         this.bindEvents();
         this.checkUrlParams();

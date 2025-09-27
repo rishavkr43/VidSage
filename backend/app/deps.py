@@ -52,7 +52,7 @@ if not USE_DUMMY:
                 return embeddings
 
         class GeminiLLM(LLMProvider):
-            def __init__(self, model_name: str = "gemini-1.5-flash"):
+            def __init__(self, model_name: str = "gemini-2.0-flash"):
                 # Updated model name - use "gemini-1.5-flash" or "gemini-1.5-pro"
                 self.model = genai.GenerativeModel(model_name)
 

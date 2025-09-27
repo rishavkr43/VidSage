@@ -25,7 +25,7 @@ VidSage/
 │   │
 │   ├── models/
 │   │   └── schemas.py                 # Pydantic models
-│   │
+│   │── .env
 │   └── rag.py                         # Embeddings + retrieval + Gemini
 │
 ├── extension/
@@ -52,7 +52,7 @@ VidSage/
 │   └── ui.js                          # Frontend logic and messaging
 │
 ├── requirements.txt
-├── .env
+|
 ├── .gitignore
 └── README.md
 ```
@@ -63,15 +63,6 @@ VidSage/
 ## 🛠️ Setup
 
 ### 1. Backend
-
-Frontend → Backend connection
-- The extension frontend is configured to talk to the deployed backend at:
-  - https://vidsage-2lhm.onrender.com
-- The extension's API base in extension/ui.js is set to that URL and manifest.json includes the host permission for it.
-- If you want to run the backend locally, change the API base in extension/ui.js to:
-  - http://localhost:8000
-  and reload the unpacked extension.
-
 # Install deps (To run Locally )
 pip install -r requirements.txt
 
@@ -82,7 +73,7 @@ Docs available at: http://127.0.0.1:8000/docs
 
 2. Environment
 
-Add your Gemini API key in .env:
+Add your Gemini API key in .env inside backend Folder:
 
 GEMINI_API_KEY="your-gemini-api-key-here"
 

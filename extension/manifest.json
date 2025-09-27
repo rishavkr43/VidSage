@@ -10,8 +10,7 @@
   ],
   
   "host_permissions": [
-    "https://www.youtube.com/*",
-    "https://vidsage-2lhm.onrender.com/*",
+    "https://www.youtube.com/*",    
     "http://localhost:8000/*"
   ],
   
